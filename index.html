@@ -13,11 +13,10 @@
     </div>
 
     <div class="header black-wall">
-            
         <h1>Portfolio</h1>
         <p class="span">2025</p>
         <p>Graphic Design</p>
-        
+        <img src="chanza/chanz-removebg-preview.png" alt="Header Image" class="header-image">
     </div>
 
     <section id="about">
@@ -298,6 +297,28 @@
             };
 
             loadNextBatch(); // Start loading the first batch
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible"); // Add visible class when in view
+                        sectionObserver.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px', // No margin
+                threshold: 0.1 // Trigger when 10% of the section is visible
+            });
+
+            sections.forEach(section => {
+                sectionObserver.observe(section); // Start observing each section
+            });
         });
     </script>
 </body>
