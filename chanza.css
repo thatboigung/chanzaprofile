@@ -8,25 +8,13 @@
 }
 
 body {
-    background-color: #f9f9f9;
-    color: gainsboro;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for contrast */
     line-height: 1.6;
-    background-color: black;
-
+    font-family: 'Arial', sans-serif; /* Ensure a clean font */
 }
 
-.navbar {
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: transparent; /* Initial transparent background */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
+
 
 .navbar.scrolled {
    opacity: 1;
@@ -38,17 +26,19 @@ body {
     font-weight: bold;
 }
 
-
 .header {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background for header */
+    color: #ffffff; /* White text color */
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
     text-align: center;
     padding: 0 20px;
+    position: relative; /* Position relative for layering */
 }
+
 .header {
     min-height: 100vh;
     display: flex;
@@ -105,7 +95,8 @@ body {
 .header h1 {
     font-size: 80px;
     font-weight: bold;
-    color: #4393fd; /* Neon Green */
+    color: #035cd1; /* Neon Green */
+    font-family: poppins;
 }
 
 .header .span {
@@ -142,7 +133,10 @@ body {
 }
 
 section {
-    padding: 60px 20px;
+    background-color: #000000; /* Black background for sections */
+    color: #ffffff; /* White text color */
+    padding: 20px; /* Add padding for sections */
+    border-bottom: 1px solid #444444; /* Optional: add a dark border */
     text-align: center;
     opacity: 0; /* Start hidden */
     transform: translateY(50px); /* Start further down */
@@ -200,12 +194,10 @@ section p {
     color: #666;
 }
 
-
 .skills-section {
     text-align: center;
     padding: 50px;
     color: #4393fd; /* Neon Yellow */
-
 }
 
 .title {
@@ -304,8 +296,8 @@ section p {
 }
 
 .footer {
-    background: #333;
-    color: #fff;
+    background-color: #333333; /* Dark footer background */
+    color: #ffffff; /* White text color */
     padding: 20px;
     text-align: center;
 }
@@ -354,7 +346,6 @@ section p {
 .gallery-section {
     text-align: center;
     padding: 50px;
-
 }
 
 .gallery-intro h1 {
@@ -365,7 +356,6 @@ section p {
 
 .gallery-intro p {
     font-size: 1.2rem;
-
     max-width: 600px;
     margin: auto;
     line-height: 1.6;
@@ -431,7 +421,6 @@ section p {
     transform: scale(1.05);
 }
 
-
 /* Optional: Media query for smaller screens */
 @media (max-width: 768px) {
     .gallery-grid {
@@ -463,7 +452,6 @@ ul li a {
 ui li span{
     color: #4393fd;
 }
-
 
 .gallery-grid img:hover {
     transform: scale(1.05);
@@ -590,21 +578,20 @@ ui li span{
 }
 
 .share-btn {
-    background: white;
-    color: black;
-    border: none;
-    padding: 10px 20px;
+    background: #0055cc; /* Button background */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
     font-size: 0.9rem;
     font-weight: 600;
     margin-top: 15px;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
     transition: all 0.3s ease-in-out;
 }
 
 .share-btn:hover {
-    background: #0066ff;
-    color: white;
+    background: #0044aa; /* Darker blue on hover */
 }
 
 /* Why Choose Us Section */
@@ -724,6 +711,8 @@ ui li span{
     width: 230px; /* Set width to 80px */
     height: 230px; /* Set height to 80px */
     object-fit: cover; /* Ensure the image covers the area without distortion */
+    position: relative; /* Ensure the image is positioned above the background */
+    z-index: 2; /* Bring the image above the background */
     filter: brightness(12.9) hue-rotate(0deg); /* Adjust brightness and hue */
     transition: filter 0.3s ease; /* Smooth transition for hover effect */
     opacity: 1;
