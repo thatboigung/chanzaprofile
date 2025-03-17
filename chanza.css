@@ -724,7 +724,7 @@ ui li span{
     width: 230px; /* Set width to 80px */
     height: 230px; /* Set height to 80px */
     object-fit: cover; /* Ensure the image covers the area without distortion */
-    filter: brightness(20.8) hue-rotate(210deg); /* Adjust brightness and hue */
+    filter: brightness(1.9) hue-rotate(0deg); /* Adjust brightness and hue */
     transition: filter 0.3s ease; /* Smooth transition for hover effect */
     opacity: 1;
 }
